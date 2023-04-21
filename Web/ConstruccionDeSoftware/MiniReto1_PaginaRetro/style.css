@@ -1,0 +1,161 @@
+/*grandotes*/
+header {
+  height: 50%;
+  overflow: hidden;
+  background-color: #333;
+  position: absolute; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 100;
+
+}
+body {
+    padding-top: 25%;
+
+    background: #f6f7fb;
+}
+section{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*Switch*/
+.image{
+  cursor:url(media/png/click.png), auto;
+}
+.container {
+  margin-top: 5%;
+  display: flex;
+  margin-bottom: 5%;
+  gap: 25%;
+  width: 100%;
+}
+.container .box {
+  flex:1;
+  text-align:center;
+  line-height: 235%;
+  height: 160px;
+  width: 160px;
+  border-radius: 12px;
+  background-color: black;
+  border: 1px solid #333;
+}
+.box .image {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("img.png");
+}
+.box .hovered {
+  border: 3px dashed #333;
+}
+
+.inv{
+  position:fixed;
+  top: 0;
+  z-index: 1;
+  height: 0;
+  width: 0;
+  font-size:0;
+}
+
+/* Retro */
+.retroBody{
+  background-image: url("dogge.gif");
+  background-repeat: repeat;
+  cursor:url(media/png/cursor.png), auto;
+  height: 100%;
+  width: 100%;
+}
+
+/* Bootstrap edits */
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-item img {
+    object-fit:fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 100%;
+}
+
+/* Otros */
+
+.boom{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position:absolute;
+  z-index: 1000;
+}
+
+.cont{
+  background-color: blanchedalmond;
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+}
+.cont p{
+  margin: 5%;
+}
+.botoncillo{
+  margin:20px;
+  padding-top:5%;
+  background-color: #f79533;
+  cursor:url(media/png/click.png), auto;
+  border-radius: 20vw;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bolder;
+  width:45%;
+  text-decoration: none;
+  color: white;
+}
+.botoncillo p{
+  font-size:100px;
+}
+.botoncillo:hover{
+  background-color: black;
+  transition-duration: 500ms;
+}
+
+.gradient-border {
+  --borderWidth: 4px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+.appear{
+  opacity:1;
+}
+/* Animaciones */
+/* gradient */
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
